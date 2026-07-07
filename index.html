@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taro Yamada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="boot-screen">
+    <div class="boot-inner">
+      <div id="boot-lines"></div>
+      <div class="boot-bar"><div class="boot-bar-fill" id="boot-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="nav-col" id="nav">
+      <div class="nav-item active" data-label="WORK">WORK</div>
+      <div class="nav-item" data-label="ABOUT">ABOUT</div>
+      <div class="nav-item" data-label="SKILL">SKILL</div>
+      <div class="nav-item" data-label="CONTACT">CONTACT</div>
+    </nav>
+
+    <div class="content-col">
+      <div class="terminal-frame">
+        <div class="terminal-bar">
+          <div class="dots">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+          <div class="path" id="terminal-path">~/work</div>
+        </div>
+        <div class="terminal-main">
+          <div class="entry-list" id="entry-list">
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 01 — WORK の内容は準備中です</div>
+            </div>
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 02 — WORK の内容は準備中です</div>
+            </div>
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 03 — WORK の内容は準備中です</div>
+            </div>
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 04 — WORK の内容は準備中です</div>
+            </div>
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 05 — WORK の内容は準備中です</div>
+            </div>
+            <div class="entry">
+              <div class="entry-title">COMING SOON</div>
+              <div class="entry-sub"># 06 — WORK の内容は準備中です</div>
+            </div>
+          </div>
+
+          <div class="about-content" id="about-content"></div>
+        </div>
+        <div class="terminal-footer">
+          <span class="prompt">guest@portfolio</span>:~$ <span id="terminal-cmd">cat work.md</span><span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
