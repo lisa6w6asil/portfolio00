@@ -1,75 +1,251 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taro Yamada</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ヘルプデスクからJavaエンジニアを目指す、りさのポートフォリオサイトです。">
+  <title>りさのポートフォリオ。</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="boot-screen">
-    <div class="boot-inner">
-      <div id="boot-lines"></div>
-      <div class="boot-bar"><div class="boot-bar-fill" id="boot-bar-fill"></div></div>
+  <div class="loader-overlay" id="loader" aria-hidden="true">
+    <div class="loader-orbit">
+      <span class="loader-ball blue"></span>
+      <span class="loader-ball yellow"></span>
     </div>
   </div>
 
-  <div class="layout">
-    <nav class="nav-col" id="nav">
-      <div class="nav-item active" data-label="WORK">WORK</div>
-      <div class="nav-item" data-label="ABOUT">ABOUT</div>
-      <div class="nav-item" data-label="SKILL">SKILL</div>
-      <div class="nav-item" data-label="CONTACT">CONTACT</div>
+  <header class="nav">
+    <p class="brand display">
+      りさ<span class="sub mono">/ portfolio</span>
+    </p>
+    <nav aria-label="主要">
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="content-col">
-      <div class="terminal-frame">
-        <div class="terminal-bar">
-          <div class="dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-          <div class="path" id="terminal-path">~/work</div>
-        </div>
-        <div class="terminal-main">
-          <div class="entry-list" id="entry-list">
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 01 — WORK の内容は準備中です</div>
-            </div>
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 02 — WORK の内容は準備中です</div>
-            </div>
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 03 — WORK の内容は準備中です</div>
-            </div>
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 04 — WORK の内容は準備中です</div>
-            </div>
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 05 — WORK の内容は準備中です</div>
-            </div>
-            <div class="entry">
-              <div class="entry-title">COMING SOON</div>
-              <div class="entry-sub"># 06 — WORK の内容は準備中です</div>
-            </div>
-          </div>
+  <main>
 
-          <div class="about-content" id="about-content"></div>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="blob blue blob--hero-a" aria-hidden="true"></div>
+      <div class="blob yellow blob--hero-b" aria-hidden="true"></div>
+
+      <figure class="hero-photo">
+        <!-- 写真に差し替える場合: <img src="images/profile.jpg" alt="りさのプロフィール写真"> -->
+        <div class="media-placeholder">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+          </svg>
+          画像準備中
         </div>
-        <div class="terminal-footer">
-          <span class="prompt">guest@portfolio</span>:~$ <span id="terminal-cmd">cat work.md</span><span class="cursor"></span>
+      </figure>
+
+      <p class="eyebrow mono">PORTFOLIO</p>
+
+      <h1 class="hero-title display">
+        <span class="line-1">
+          <span class="ch" style="--i:0">り</span><span class="ch" style="--i:1">さ</span><span class="ch" style="--i:2">の</span>
+        </span>
+        <br>
+        <span class="line-2">
+          <span class="ch" style="--i:0">ポ</span><span class="ch" style="--i:1">ー</span><span class="ch" style="--i:2">ト</span><span class="ch" style="--i:3">フ</span><span class="ch" style="--i:4">ォ</span><span class="ch" style="--i:5">リ</span><span class="ch" style="--i:6">オ</span><span class="ch" style="--i:7">。</span>
+        </span>
+      </h1>
+
+      <p class="lead">
+        ヘルプデスクから、Javaエンジニアへ。<br>
+        いま、一歩ずつ学びながらつくっています。
+      </p>
+
+      <div class="hero-signature" aria-hidden="true">
+        <svg viewBox="0 0 150 150" width="150" height="150">
+          <!-- soft ground -->
+          <ellipse cx="75" cy="128" rx="46" ry="8" fill="#F0EADB"/>
+          <!-- code bracket pot -->
+          <path d="M55 70 L45 90 L45 108 L55 128" stroke="#5C86A0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M95 70 L105 90 L105 108 L95 128" stroke="#5C86A0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- stem -->
+          <path d="M75 118 C75 100 75 92 75 78" stroke="#8FAE7C" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- leaves -->
+          <path d="M75 96 C60 92 56 78 62 68 C74 74 78 88 75 96 Z" fill="#AFCEDE"/>
+          <path d="M75 88 C90 84 96 70 90 60 C78 66 72 80 75 88 Z" fill="#F3D998"/>
+          <!-- small sparkle -->
+          <circle cx="108" cy="52" r="2.5" fill="#F3D998"/>
+          <circle cx="40" cy="46" r="2" fill="#AFCEDE"/>
+        </svg>
+      </div>
+
+      <ul class="tags">
+        <li class="pill">JAVA SE 17 Silver（学習中）</li>
+        <li class="pill">SQL</li>
+        <li class="pill">Git / SourceTree</li>
+        <li class="pill">IT パスポート</li>
+      </ul>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <div class="blob blue blob--about" aria-hidden="true"></div>
+
+      <div class="section-head">
+        <p class="eyebrow mono">ABOUT</p>
+        <h2 class="display">わたしのこと</h2>
+      </div>
+
+      <div class="about-card">
+        <p class="name display">りさ</p>
+        <p>登録販売者、生命保険の営業を経て、現在はヘルプデスクとして勤務しています。日々の対応の中で「仕組みそのものを作る側になりたい」という気持ちが強くなり、Javaエンジニアへのキャリアチェンジを目指すことにしました。</p>
+        <p>現在はJava SE 17 Silverの資格取得に向けて学習を進めながら、平日の夜と週末の時間を使ってポートフォリオ制作にも取り組んでいます。まだ道の途中ですが、ひとつずつ形にしていくことを大切にしています。</p>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <div class="blob yellow blob--skills" aria-hidden="true"></div>
+
+      <div class="section-head">
+        <p class="eyebrow mono">SKILLS</p>
+        <h2 class="display">できること・学んでいること</h2>
+      </div>
+
+      <div class="skill-cols">
+        <div class="skill-block">
+          <h3>ENGINEERING</h3>
+          <ul class="skill-list">
+            <li><span class="dot"></span>Java（例外処理・オブジェクト指向）<span class="pill pill--sm mono">学習中</span></li>
+            <li><span class="dot"></span>SQL 基礎<span class="pill pill--sm mono">学習中</span></li>
+            <li><span class="dot"></span>HTML / CSS / JavaScript<span class="pill pill--sm mono">実装可</span></li>
+            <li><span class="dot"></span>Git（SourceTree）<span class="pill pill--sm mono">実務利用</span></li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>QUALIFICATIONS</h3>
+          <ul class="skill-list">
+            <li><span class="dot"></span>IT パスポート<span class="pill pill--sm mono">取得済</span></li>
+            <li><span class="dot"></span>Java SE 17 Silver<span class="pill pill--sm mono">受験予定</span></li>
+            <li><span class="dot"></span>登録販売者<span class="pill pill--sm mono">取得済</span></li>
+            <li><span class="dot"></span>FP技能検定3級<span class="pill pill--sm mono">取得済</span></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects">
+      <div class="blob blue blob--projects-a" aria-hidden="true"></div>
+      <div class="blob blue blob--projects-b" aria-hidden="true"></div>
+
+      <div class="section-head">
+        <p class="eyebrow mono">PROJECTS</p>
+        <h2 class="display">つくっているもの</h2>
+      </div>
+
+      <div class="proj-list">
+
+        <article class="proj-row">
+          <div class="proj-media">
+            <!-- 画像に差し替える場合: <img src="images/todo.jpg" alt="ToDo Listのスクリーンショット"> -->
+            <div class="media-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 9h10M7 13h10M7 17h6"/>
+              </svg>
+              画像準備中
+            </div>
+          </div>
+          <div class="proj-copy">
+            <span class="num mono">01</span>
+            <h3>ToDo List</h3>
+            <p>タスクの追加・完了・削除ができるシンプルな管理アプリ。基礎固めとして最初に取り組んだ一本。</p>
+            <span class="pill pill--sm mono">制作中</span>
+          </div>
+        </article>
+
+        <article class="proj-row reverse">
+          <div class="proj-media">
+            <div class="media-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/>
+              </svg>
+              画像準備中
+            </div>
+          </div>
+          <div class="proj-copy">
+            <span class="num mono">02</span>
+            <h3>在庫管理アプリ</h3>
+            <p>商品の入出庫と数量をシンプルに記録・確認できるアプリ。データの扱い方を実践的に学ぶ題材。</p>
+            <span class="pill pill--sm mono">準備中</span>
+          </div>
+        </article>
+
+        <article class="proj-row">
+          <div class="proj-media">
+            <div class="media-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M3 12h18"/><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1 1-1.5 3-1.5s3 .8 3 1.8-1 1.4-3 1.7-3 .8-3 1.8 1.3 1.7 3 1.7 3-.5 3-1.5"/>
+              </svg>
+              画像準備中
+            </div>
+          </div>
+          <div class="proj-copy">
+            <span class="num mono">03</span>
+            <h3>家計簿アプリ</h3>
+            <p>収支を記録し、月ごとの傾向を見える化するアプリ。自分自身が欲しかったツールをかたちに。</p>
+            <span class="pill pill--sm mono">準備中</span>
+          </div>
+        </article>
+
+        <article class="proj-row reverse flagship">
+          <div class="proj-media">
+            <div class="media-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>
+              </svg>
+              画像準備中
+            </div>
+          </div>
+          <div class="proj-copy">
+            <span class="num mono">04</span>
+            <h3>予約管理システム</h3>
+            <p>日時・人数・空き状況を管理する、集大成として取り組む予定のフラッグシップ案件。</p>
+            <span class="pill pill--sm mono">FLAGSHIP</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="contact">
+      <div class="blob yellow blob--contact" aria-hidden="true"></div>
+
+      <div class="section-head">
+        <p class="eyebrow mono">CONTACT</p>
+        <h2 class="display">ご覧いただき<br>ありがとうございます</h2>
+      </div>
+
+      <p>ご質問やお仕事のご相談は、下記よりお気軽にご連絡ください。</p>
+      <a class="mail mono" href="mailto:example@example.com">example@example.com</a>
+    </section>
+
+  </main>
+
+  <footer>© 2026 Risa</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
