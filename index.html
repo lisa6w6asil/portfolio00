@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ヘルプデスクからJavaエンジニアを目指す、りさのポートフォリオサイトです。">
+  <meta name="description" content="ヘルプデスクから開発エンジニアを目指す、りさのポートフォリオサイトです。">
   <title>りさのポートフォリオ。</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,34 +67,31 @@
         </span>
       </h1>
 
+      <!-- 変更:Javaエンジニア → 開発エンジニア(言語にこだわらない今の方針に合わせた) -->
       <p class="lead">
-        ヘルプデスクから、Javaエンジニアへ。<br>
+        ヘルプデスクから、開発エンジニアへ。<br>
         いま、一歩ずつ学びながらつくっています。
       </p>
 
       <div class="hero-signature" aria-hidden="true">
         <svg viewBox="0 0 150 150" width="150" height="150">
-          <!-- soft ground -->
           <ellipse cx="75" cy="128" rx="46" ry="8" fill="#F0EADB"/>
-          <!-- code bracket pot -->
           <path d="M55 70 L45 90 L45 108 L55 128" stroke="#5C86A0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M95 70 L105 90 L105 108 L95 128" stroke="#5C86A0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- stem -->
           <path d="M75 118 C75 100 75 92 75 78" stroke="#8FAE7C" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <!-- leaves -->
           <path d="M75 96 C60 92 56 78 62 68 C74 74 78 88 75 96 Z" fill="#AFCEDE"/>
           <path d="M75 88 C90 84 96 70 90 60 C78 66 72 80 75 88 Z" fill="#F3D998"/>
-          <!-- small sparkle -->
           <circle cx="108" cy="52" r="2.5" fill="#F3D998"/>
           <circle cx="40" cy="46" r="2" fill="#AFCEDE"/>
         </svg>
       </div>
 
+      <!-- 変更:実際に作品で使った技術を前に出した -->
       <ul class="tags">
-        <li class="pill">JAVA SE 17 Silver（学習中）</li>
+        <li class="pill">Java / Spring Boot</li>
         <li class="pill">SQL</li>
-        <li class="pill">Git / SourceTree</li>
-        <li class="pill">IT パスポート</li>
+        <li class="pill">Git / GitHub</li>
+        <li class="pill">Java SE 17 Silver(学習中)</li>
       </ul>
     </section>
 
@@ -109,8 +106,8 @@
 
       <div class="about-card">
         <p class="name display">りさ</p>
-        <p>登録販売者、生命保険の営業を経て、現在はヘルプデスクとして勤務しています。日々の対応の中で「仕組みそのものを作る側になりたい」という気持ちが強くなり、Javaエンジニアへのキャリアチェンジを目指すことにしました。</p>
-        <p>現在はJava SE 17 Silverの資格取得に向けて学習を進めながら、平日の夜と週末の時間を使ってポートフォリオ制作にも取り組んでいます。まだ道の途中ですが、ひとつずつ形にしていくことを大切にしています。</p>
+        <p>登録販売者、生命保険の営業を経て、現在はヘルプデスクとして勤務しています。日々の対応の中で「仕組みそのものを作る側になりたい」という気持ちが強くなり、開発エンジニアへのキャリアチェンジを目指すことにしました。</p>
+        <p>現在はJava SE 17 Silverの学習を進めながら、平日の夜と週末の時間を使って、Spring Bootで食材管理アプリを作っています。問い合わせを受ける側にいた経験から、使う人がつまずかない画面づくりを大切にしています。</p>
       </div>
     </section>
 
@@ -126,11 +123,13 @@
       <div class="skill-cols">
         <div class="skill-block">
           <h3>ENGINEERING</h3>
+          <!-- 変更:「実務利用」は仕事で使っている意味に読まれるため「個人開発」に。作品で使った技術を追加 -->
           <ul class="skill-list">
-            <li><span class="dot"></span>Java（例外処理・オブジェクト指向）<span class="pill pill--sm mono">学習中</span></li>
-            <li><span class="dot"></span>SQL 基礎<span class="pill pill--sm mono">学習中</span></li>
+            <li><span class="dot"></span>Java / Spring Boot<span class="pill pill--sm mono">個人開発</span></li>
+            <li><span class="dot"></span>Thymeleaf(画面の表示)<span class="pill pill--sm mono">個人開発</span></li>
+            <li><span class="dot"></span>SQL / JPA / H2<span class="pill pill--sm mono">個人開発</span></li>
             <li><span class="dot"></span>HTML / CSS / JavaScript<span class="pill pill--sm mono">実装可</span></li>
-            <li><span class="dot"></span>Git（SourceTree）<span class="pill pill--sm mono">実務利用</span></li>
+            <li><span class="dot"></span>Git / GitHub(SourceTree・VS Code)<span class="pill pill--sm mono">個人開発</span></li>
           </ul>
         </div>
         <div class="skill-block">
@@ -157,7 +156,29 @@
 
       <div class="proj-list">
 
-        <article class="proj-row">
+        <!-- 変更:実際に動いている食材管理アプリを主役に -->
+        <article class="proj-row flagship">
+          <div class="proj-media">
+            <!-- 在庫確認画面のスクリーンショットを images フォルダーに入れたら差し替える:
+                 <img src="images/fridge-stocks.png" alt="食材管理アプリの在庫確認画面"> -->
+            <div class="media-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <rect x="6" y="3" width="12" height="18" rx="2"/><path d="M6 10h12M9 6.5v1.5M9 13v2"/>
+              </svg>
+              画像準備中
+            </div>
+          </div>
+          <div class="proj-copy">
+            <span class="num mono">01</span>
+            <h3>食材管理アプリ</h3>
+            <p>冷蔵庫の中身を把握できず、食材を無駄にしてしまう自分の困りごとから作ったWebアプリ。「買った」「使った」を記録すると、在庫を冷蔵・冷凍・常温ごとに計算し、期限が近いものを一番上に知らせます。</p>
+            <p>記録は書き換えずに積み上げて在庫をその都度計算する設計にし、数量は「1個＝100」の整数で持つことで小数の誤差を避けています。</p>
+            <p class="mono">Java / Spring Boot / Thymeleaf / JPA / H2</p>
+            <span class="pill pill--sm mono">公開準備中</span>
+          </div>
+        </article>
+
+        <article class="proj-row reverse">
           <div class="proj-media">
             <!-- 画像に差し替える場合: <img src="images/todo.jpg" alt="ToDo Listのスクリーンショット"> -->
             <div class="media-placeholder">
@@ -168,64 +189,19 @@
             </div>
           </div>
           <div class="proj-copy">
-            <span class="num mono">01</span>
+            <span class="num mono">02</span>
             <h3>ToDo List</h3>
-            <p>タスクの追加・完了・削除ができるシンプルな管理アプリ。基礎固めとして最初に取り組んだ一本。</p>
+            <p>タスクの追加・完了・削除ができる、コンソールで動くJavaの管理アプリ。基礎固めとして最初に取り組んだ一本。</p>
             <span class="pill pill--sm mono">制作中</span>
           </div>
         </article>
 
-        <article class="proj-row reverse">
-          <div class="proj-media">
-            <div class="media-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-                <path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/>
-              </svg>
-              画像準備中
-            </div>
-          </div>
-          <div class="proj-copy">
-            <span class="num mono">02</span>
-            <h3>在庫管理アプリ</h3>
-            <p>商品の入出庫と数量をシンプルに記録・確認できるアプリ。データの扱い方を実践的に学ぶ題材。</p>
-            <span class="pill pill--sm mono">準備中</span>
-          </div>
-        </article>
+      </div>
 
-        <article class="proj-row">
-          <div class="proj-media">
-            <div class="media-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-                <path d="M3 12h18"/><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1 1-1.5 3-1.5s3 .8 3 1.8-1 1.4-3 1.7-3 .8-3 1.8 1.3 1.7 3 1.7 3-.5 3-1.5"/>
-              </svg>
-              画像準備中
-            </div>
-          </div>
-          <div class="proj-copy">
-            <span class="num mono">03</span>
-            <h3>家計簿アプリ</h3>
-            <p>収支を記録し、月ごとの傾向を見える化するアプリ。自分自身が欲しかったツールをかたちに。</p>
-            <span class="pill pill--sm mono">準備中</span>
-          </div>
-        </article>
-
-        <article class="proj-row reverse flagship">
-          <div class="proj-media">
-            <div class="media-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-                <rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>
-              </svg>
-              画像準備中
-            </div>
-          </div>
-          <div class="proj-copy">
-            <span class="num mono">04</span>
-            <h3>予約管理システム</h3>
-            <p>日時・人数・空き状況を管理する、集大成として取り組む予定のフラッグシップ案件。</p>
-            <span class="pill pill--sm mono">FLAGSHIP</span>
-          </div>
-        </article>
-
+      <!-- 変更:まだ作っていないものは作品として並べず、予定として分けた -->
+      <div class="about-card">
+        <p class="eyebrow mono">NEXT</p>
+        <p>次は、PHPで小さなネットショップ「tenori」(商品一覧・カート・注文・管理画面)を作っています。フレームワークを使わずに、SQLインジェクションやXSSなどへの対策を自分で書いて理解することが目標です。</p>
       </div>
     </section>
 
@@ -238,8 +214,12 @@
         <h2 class="display">ご覧いただき<br>ありがとうございます</h2>
       </div>
 
-      <p>ご質問やお仕事のご相談は、下記よりお気軽にご連絡ください。</p>
-      <a class="mail mono" href="mailto:example@example.com">example@example.com</a>
+      <!-- 変更:届かない example@example.com をやめて、GitHubへの入口を置いた -->
+      <p>コードはGitHubで公開しています。ご質問やお仕事のご相談も、下記からどうぞ。</p>
+      <a class="mail mono" href="https://github.com/lisa6w6asil">github.com/lisa6w6asil</a>
+      <!-- 連絡用のメールアドレスを載せる場合は、下の行の2か所を自分のアドレスに変えてから、コメントを外す
+      <a class="mail mono" href="mailto:ここにアドレス">ここにアドレス</a>
+      -->
     </section>
 
   </main>
